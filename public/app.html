@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Resume Generator</title>
+
+  <link rel="stylesheet" href="/assets/app.css" />
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brandText">Resume Generator</span>
+    </div>
+
+    <div class="topbarRight">
+      <div class="welcome" id="welcome">Welcome</div>
+      <button class="btn ghost" id="logoutBtn" type="button">Logout</button>
+    </div>
+  </header>
+
+  <div class="shell">
+    <main class="main">
+      <!-- Left -->
+      <section class="card left">
+        <div class="cardhead">
+          <div>
+            <div class="title">Job Description</div>
+            <div class="subtitle">Paste the JD, then click Generate (Ctrl/⌘ + Enter)</div>
+          </div>
+        </div>
+
+        <div class="fieldWrap">
+          <div class="fieldLabel">Company Name</div>
+          <input id="companyName" type="text" placeholder="e.g., Google, Microsoft, Apple..." />
+        </div>
+
+        <textarea id="jd" placeholder="Paste job description OR job URL here..."></textarea>
+
+        <div class="actions">
+          <button class="btn primary" id="generateBtn" type="button">Generate</button>
+          <button class="btn soft" id="copyBtn" type="button" disabled>Copy JSON</button>
+          <button class="btn soft" id="wordBtn" type="button" disabled>Word</button>
+          <button class="btn soft" id="pdfBtn" type="button" disabled>PDF</button>
+        </div>
+      </section>
+
+      <!-- Right -->
+      <section class="card right">
+        <div class="cardhead">
+          <div>
+            <div class="title">Generated Resume</div>
+            <div class="subtitle" id="hint">Ready</div>
+          </div>
+
+          <div class="subtitle hintRight">
+            <strong>Edit mode:</strong> Click ✏️ to edit. Save ✅ updates Word/PDF exports.
+          </div>
+        </div>
+
+        <div class="output" id="output">
+          <div class="banner" id="banner"></div>
+          <div class="status" id="status">Paste a job description and click Generate.</div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="/assets/app.js"></script>
+</body>
+</html>
